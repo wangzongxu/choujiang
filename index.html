@@ -45,10 +45,17 @@
 </head>
 <body>
   <div class="container">
-    <h1>加入巴鲁大户俱乐部，做成功农场主</h1>
+    <h1 id="title"></h1>
     <div class="frame-box">
       <iframe src="https://choujiang.51240.com/" frameborder="0"></iframe>  
     </div>
   </div>
 </body>
+<script>
+  var url = new URL(location.href)
+  var titleText = url.searchParams.get('title') || '加入巴鲁大户俱乐部，做成功农场主'
+  var titleElm = document.getElementById('title')
+
+  titleElm.innerText = titleText
+</script>
 </html>
